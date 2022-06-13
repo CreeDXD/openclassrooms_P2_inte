@@ -1,0 +1,1037 @@
+/* box sizing defini la façon dont la hauteur et la largeur total d'un élément est calculée */
+*{
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+ }
+
+            /*** --code generique pour tout les types d'ecran-- ***/
+/* seletion de tout '*'  */
+*{
+    font-family: 'Raleway', sans-serif;
+    padding:0;
+    margin:0;
+}
+
+/* selection de tout les liens */
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* selection de tout les liens visité */
+a:visited{
+    text-decoration: none;
+}
+
+/* class qui enleve les effets des listes et les disposes horizontalement */
+.liste_horizontal{
+    display: block;
+}
+
+.liste_horizontal li{
+    list-style: none;
+    display:inline-block;
+}
+
+/* selection de toutes les cards */
+.all_card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition-duration:0.2s;
+}
+
+.all_card:hover{
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transition-duration:0.2s;
+}
+
+/* etoile gen */
+/* selection de toute les étoiles bleu */
+.color_etoile_bleu{
+    color: #0065fc;
+}
+
+/* selection de toute les étoiles gris */
+.color_etoile_gris{
+    color:#F2F2F2;
+}  
+
+/* header gen*/
+header{
+    display:flex;
+}
+.hebergement{
+    color: #0065fc;
+}
+
+/* h1 gen */
+.premier_titre h1{
+    font-family:'Raleway';
+    font-weight:bolder;
+}
+.premier_titre h3{
+    font-family: 'Raleway';
+    font-weight:300;
+}
+
+/*search gen*/
+.search {
+    display: flex; 
+}
+.search input{
+    border: #F2F2F2 solid 1px;
+}
+.search button{
+    background-color: #0065fc;
+    height: 40px;
+    border: #F2F2F2 solid 1px;
+}
+
+/* button localistion gen*/
+ .fa-location-dot{
+    background-color: #F2F2F2;
+    width: 40px;
+    height:auto;
+    border-radius: 13px 0px 0px 13px;
+}
+
+/* avec ::before on selectionne juste l'image */
+.fa-location-dot::before{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+/* filtre gen*/
+/* div qui englobe le text 'filtre' et les filtres */
+.centrer_filtres{
+    display: flex;
+    padding-top:25px;
+}
+.centrer_filtres p{
+    padding-top:15px;
+    padding-right:15px;
+    font-family:'Raleway';
+    font-weight:bolder;
+}
+
+/* container de touts les filtres */
+ .liste_filtres{
+    display: flex;  
+}
+
+/* selection de chaque filtre */
+.liste_filtres li{
+    border-radius: 25px;
+    margin-right:17px;    
+}
+
+/* selection de chaque image des filtres */
+.liste_filtres i{
+    color:#0065fc;
+    margin-left: -10px;
+    background-color: #DEEBFF;
+    padding:13px;
+    border-radius: 30px;
+    margin-left: -3px;
+}
+
+/* selection des liens */
+.liste_filtres a{
+    font-family:'Raleway';
+    font-weight:bolder;
+    padding-right:10px;
+    padding-left:5px;
+}
+
+/* selection de l'enfant qui lève les bras */
+.fa-child-reaching{
+    width: 40px;
+ }
+
+/* selection de juste l'image de l'enfant */
+.fa-child-reaching::before{
+    margin-left: 1px;
+}
+
+/* selection de chaque elements du filtres */
+.border_li{
+    border:#d9d9d9 solid 2px;
+}
+
+/* selection de chaque elements du filtres lorsqu'il est survolé*/
+.border_li:hover{
+    background-color:#F2F2F2;
+    color:#0065fc;
+}
+
+/* info gen*/
+.fa-info{
+    color: #0065fc;
+    border:#F2F2F2 solid 2px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-right: 15px;
+    margin-top:-5px;
+}
+.logo_nb_logements_info{
+    display:flex;
+    margin-top:20px;
+}
+
+/* container_section gen*/
+/* container section est la div qui contient les sections hebergement et populaire */
+.container_section{
+    display: flex;
+}
+
+/* selection des 2 titres hebergement et populaire*/
+section h2{
+    font-size: 19px;
+    font-family:'Raleway';
+    font-weight:bolder;
+}
+
+/* hebergement gen */
+/* article container est la div qui contient les articles de la section hebergement (utilisé pour la disposition des cartes) */
+.articles_container{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* big card est une div qui contient articles container et le titre hebergement */
+.big-card{
+    margin-top: 20px;
+    display: flex;
+    flex-direction:column;
+}
+
+/* card gen*/
+/* selection du contenu de chaque article dans hebergement */
+.card{
+    display: flex;
+    flex-direction:column;
+    border-radius:20px;
+    background-color:white;
+}
+.card p{
+    padding-bottom: 10px;
+}
+.card img{
+    width:100%;
+    height: 141.33px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* populaire gen */
+.card_populaire_container
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    height: 100%;
+    padding-right:20px;
+    padding-left: 20px;
+}
+.populaire_section{
+    background-color: #F2F2F2;
+}
+.titre_populaire{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.article_populaire{
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-direction:row;
+    position:relative;
+}
+
+/*card_populaire gen*/
+.card_populaire{
+    display: flex;
+    flex-direction:row;
+    width: 95%;
+    height:150px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    margin-bottom:40px;
+    border-radius:20px;
+    background-color:white;
+}
+
+/* seletion du titre du prix et des etoiles des cards populaires*/
+.card_populaire_info{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    padding-top:3%;
+    padding-right:3%;
+    padding-left:3%;
+}
+.card_populaire_info h3{
+    font-family:'Raleway';
+    font-weight:bolder;
+    font-size:16px; 
+    padding-bottom:10px;
+}
+.card_populaire_info p{
+    font-size: small;
+}
+.etoile_populaire{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 5px;
+}
+.card_populaire img{
+    width:40%;
+    height:140px;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* activite gen*/
+/* container qui englobe toute la section activité */
+.container_activite{
+    margin-top: 30px;
+    display: flex;
+    flex-direction:column;
+}
+
+/* selection de toutes les cards activité */
+.card_activite{
+    display: flex;
+    flex-direction:column;
+    border-radius:20px;
+}
+.card_activite img{
+    width: 100%;        
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+.card_activite h3{
+    font-size:16px;
+    font-family:'Raleway';
+    font-weight:bolder;
+    padding-left:8%;
+}
+
+/* container qui defini la taille de chaque card activité */
+.container_article_activite{
+    height:100%;
+}
+
+/* selection des 2 activitées à gauche des grandes activitées */
+.container_small_activite{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* footer gen*/
+footer{
+    display:flex;
+    background-color: #F2F2F2;
+    margin-top: 50px;
+}
+footer h3{
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+footer p{
+    padding-bottom:10px;
+}
+    
+            /***--pour ordinateur--***/
+@media screen and (min-width:993px){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    /* container de tout le contenu du site */
+    .container{
+        height: 100%;
+        width:90%;
+    }    
+    
+    /* header pc */
+    /* balise qui englobe tout le header */
+    header {
+        justify-content: space-between;
+        padding-top:35px;
+    }
+    header img{
+        height: 30px;
+        width: auto;
+    }
+    .liste_header{
+        margin-top:-35px;
+    }
+    .liste_header li{
+        transition-duration:0.2s;
+    }
+    .liste_header li:hover{
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+        transition-duration:0.2s;
+    }
+    /* selection de hebergement dans l'entête */
+    .hebergement{
+        border-top: 2px solid  #0065fc;
+        padding-right: 20px;
+    }
+           
+    /* selection de activités dans l'entête */
+    .activites{
+        padding-right: 20px;
+    }  
+      
+    /* h1 pc */
+    .premier_titre h1{
+        font-size: 17px; 
+        margin-bottom: 7px;
+        margin-top: 25px;
+    }
+    .premier_titre h3{
+        font-size:12px;
+        margin-bottom: 13px;
+    }
+
+    /* search pc */
+    /* zone de texte pc*/
+    .search input{
+        width: 30%;
+        outline-offset: 0px;
+        padding-left:20px;
+    }
+    
+    /* boutton de recherche pc*/
+    .search button{
+        margin-left: -80px;
+        border-radius: 0px 13px 13px 0px;
+        color: white;
+        padding-right: 15px;
+        padding-left: 15px; 
+        font-weight: bold;  
+        font-size: small;
+    }
+
+    /* cacher l'icon pour la résolution ordi et tab */
+    .search button i
+    {
+        display: none;
+    }
+
+    /* filtre pc */
+    .centrer_filtres{
+        flex-direction: row;
+    }
+    .liste_header li{
+        padding-left: 20px;
+        padding-top:37px;
+        font-size: 15px;
+        font-weight: bold;
+    }    
+        
+    /* info nb logements pc */    
+    .logo_nb_logements_info{
+        flex-direction:row;
+    }
+
+    /* container des sections hebergement, populaire et activité pc*/   
+    .container_card{
+        margin-top:10px;        
+    }    
+
+    /* hebergement pc */
+    .hebergement_section{
+        width:70%;
+        margin-right: 30px;
+        border-radius: 20px;
+        padding:40px;
+        background-color: #F2F2F2;
+    }
+
+    /* article container est la div qui contient les articles de la section hebergement (utilisé pour la disposition des cartes) */
+    .articles_container{
+        width: auto;        
+    }
+
+    /* carte hebergement pc */
+    .card{        
+        width: 30%;
+        min-width: 170px;
+        padding: 5px;
+        margin-bottom:40px;
+    }    
+    .card h3{
+        font-family:'Raleway';
+        font-weight:bolder;
+        font-size:16px; 
+        padding-bottom: 10px;
+        margin-left: 10px;
+    }
+    .card p{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .etoiles_hebergemenet{
+        display: flex;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* selection de 'afficher plus' en bas de hebergment */
+    .font_bold{
+        font-family:'Raleway';
+        font-weight:bolder;
+    }
+
+    /* populaire pc */
+    .populaire_section{
+        border-radius: 20px;
+        padding-top: 40px;
+        width: 30%;
+    } 
+
+    /* activite pc*/
+    .container_activite{
+        height:20%;
+    }
+
+    /* activité sans le titre pc*/
+    .container_six_activite{
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction:row;
+    }
+
+    /* les 2 containers avec 1 grosse activie
+     et 2 petite pc*/
+    .container_trois_activite{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 48.5%;
+        height: 400px;
+    }
+    .container_h3_activite{
+        padding-top:2%;
+    }
+
+    /* les 2 grosses  'card' dans la section activité pc*/
+    .big_activite_card{
+        width:47%;
+    }
+    .big_activite_card img{
+        height: 88.5%;
+    }
+    .card_activite h3{
+        padding-left:8%;
+    }
+    /* les 4 plus petites cards pc*/
+    .container_small_activite{
+        width: 47%;
+    }
+    
+    /* la 3eme 'card' pc*/
+    .frioul_activite_card{
+        width: 100%;
+        height:40%;
+    }
+    .frioul_activite_card img{
+        height:71%;
+    }
+    /* la 5eme 'card' pc*/
+    .notre_dame_activite_card{
+        width: 100%;
+        height:40%;
+    }
+    .notre_dame_activite_card img{
+        height: 71%;
+    }
+    /* les cartes 2 et 6 de la section activite pc */
+    .small_activite_card{
+        width: 100%;
+        height:50%;
+    }
+    .small_activite_card img{
+        height:77%;
+    }    
+
+    /* footer pc*/
+    footer{
+        flex-direction:row;
+        justify-content: space-between;
+        padding: 4%;
+    }
+    footer div{
+        width:70%;
+    }   
+}
+
+            /***--pour tablette--***/
+@media screen and (min-width: 768px) and (max-width: 992px)
+{
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    /* container de tout le contenu du site */
+    .container{
+        height: 100%;
+        width:90%;
+    }    
+    
+    /* header tb */
+    header{
+        justify-content: space-between;
+        padding-top:35px;
+    }
+    header img{
+        height: 30px;
+        width: auto;
+    }   
+
+    /* selection des li hebergement et activités */
+    .liste_header{
+        margin-top:-35px;
+    }
+    .liste_header li{
+        padding-left: 20px;
+        padding-top:37px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* selection de hebergement dans l'entête */
+    .hebergement{
+        border-top: 2px solid  #0065fc;
+        padding-right: 20px;
+    }
+
+    /* selection de activités dans l'entête */
+    .activites{
+        padding-right: 0px;
+    }    
+    
+    /* h1 pc */
+    .premier_titre h1{
+        font-size: 17px; 
+        margin-bottom: 7px;
+        margin-top: 25px;
+
+    }
+    .premier_titre h3{
+        font-size:12px;
+        margin-bottom: 13px;
+    }
+
+    /* search tb */
+    /* zone de texte tb*/
+    .search input{
+        padding-left: 20px;
+        width: 245px;
+    }
+    
+    /* boutton de recherche tb*/
+    .search button{
+        margin-left: -80px;
+        border-radius: 0px 13px 13px 0px;
+        color: white;
+        padding-right: 15px;
+        padding-left: 15px; 
+        font-weight: bold;  
+        font-size: small;
+    }
+
+    /* cacher l'icon pour la résolution ordi et tab */
+    .search button i
+    {
+        display: none;
+    }
+    
+    /* filtres tb */
+    .liste_filtres{
+        flex-wrap: wrap;
+    }    
+    .liste_filtres li{
+        margin-bottom:10px;
+    }
+    .filtres{
+        margin-bottom:10px;
+    }
+    .centrer_filtres{
+        flex-direction: column;
+    }
+
+    /* info nb logements tb */    
+    .logo_nb_logements_info{
+        flex-direction:row;
+        width:80%;
+    }
+    
+    /* container des sections hebergement, populaire et activité pc*/   
+    .container_card{
+        margin-top:30px;
+    }
+
+    /* container des sections hebergement et populaire */
+    .container_section{
+        flex-direction: column-reverse;
+    }    
+    
+    /* hebergement tb*/
+    /* section pour les cartes tb */    
+    .hebergement_section{
+        width:100%;
+        margin-right: 60px;
+        border-radius: 20px;
+        padding:40px;
+    } 
+    
+    /* article container est la div qui contient les articles de la section hebergement (utilisé pour la disposition des cartes) */
+    .articles_container{
+        width: 100%;        
+    } 
+    
+    /* carte hebergement tb */
+    .card{        
+        width: 30%;
+        padding: 4px;
+        margin-bottom:40px;
+    }    
+    .card h3{
+        font-family:'Raleway';
+        font-weight:bolder;
+        font-size:16px;
+        margin-bottom: 5px;
+    }
+    .card p{
+        font-size: small;
+    }
+    .card_hebergement_container{
+        margin-left: 10px;
+    }
+
+    /* selection de 'afficher plus' en bas de hebergment */
+    .font_bold{
+        font-family:'Raleway';
+        font-weight:bolder;
+    }
+
+    /* populaire tb */
+    .populaire_section{
+        padding-top: 40px;
+        width: 100%;
+    }
+
+    /* activité tb*/
+    .container_activite{    
+        height:20%;
+    }
+
+    /* activité sans le titre tb*/
+    .container_six_activite{
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction:row;
+    }
+
+    /* les 2 containers avec 1 grosse activie
+    et 2 petite tb*/
+    .container_trois_activite{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 48.5%;
+        height: 400px;
+    }
+    .container_h3_activite_tb{    
+        line-height: 200%;
+    }
+
+    /* les 2 grosses  'card' dans la section activité tb*/
+    .big_activite_card{
+        width:47%;
+    }
+    .big_activite_card img{
+        height: 88.5%;
+    }
+
+    /* les 4 plus petites cards tb*/
+    .container_small_activite{
+        width: 47%;
+    }
+
+    /* la 3eme 'card' tb*/
+    .frioul_activite_card{
+        width: 100%;
+        height:40%;
+    }
+    .frioul_activite_card img{
+        height:71%;
+    }
+
+    /* la 5eme 'card' tb*/
+    .notre_dame_activite_card{
+        width: 100%;
+        height:40%;
+    }
+    .notre_dame_activite_card img{
+        height: 71%;
+    }
+
+    /* les cartes 2 et 6 de la section activite tb */
+    .small_activite_card{
+        width: 100%;
+        height:50%;
+    }
+    .small_activite_card img{
+        height:77%;
+    }    
+    /* footer tb*/
+    footer{
+        flex-direction:row;
+        padding: 5%;
+    }
+    footer div{
+        width:100%;
+        margin-right: 10%;
+    } 
+}
+
+            /***--pour smartphone--***/
+@media screen and (max-width: 767px)
+{
+    /* header sm*/
+    header{
+        flex-direction: column;
+    }
+    header img{
+        display:block;
+        margin-left: auto;
+        margin-right:auto;
+        margin-bottom:25px;
+        margin-top:20px;
+        width: 80px;
+        height:38px;
+    }
+
+    /* container de hebergement et activités */
+    .liste_header{
+        display:flex;
+        text-align: center;
+    } 
+
+    /* selection des li hebergement et activités */
+    .liste_header li{
+        width:50%;
+        padding-bottom:15px;
+
+    }
+
+    /* selection de hebergement dans l'entête */
+    .hebergement{
+        border-bottom:#0065fc solid 3px;
+    }
+
+    /* selection de activités dans l'entête */
+    .activites{
+        border-bottom: 3px solid #F2F2F2;
+    }  
+
+    /* h1 sm */
+    .premier_titre{
+        font-size: 9px; 
+        width:75%;
+        margin-right:12.5%;
+        margin-left:12.5%;
+    }    
+         
+    .premier_titre h1{
+        margin-top:35px;
+    }
+    .premier_titre h3{
+        width: 270px;        
+        margin-bottom:40px;
+    }
+
+    /* search sm*/    
+    .search{
+        justify-content: center;
+    }
+
+    /* zone de texte sm*/
+    .search input{
+        padding-left: 20px;
+        width: 55%;
+    }
+    
+    /* boutton de recherche sm*/
+    .search button{
+        margin-left: -20px;
+        border-radius: 13px 13px 13px 13px;
+    } 
+
+    /* cacher le texte pour la résolution smartphone */
+    .search button span{
+        display: none;
+    }
+    .search button i
+    {
+        color: white;
+        width: 40px;
+    }
+
+    /* filtres sm */
+    .liste_filtres{
+        flex-wrap: wrap;
+    }
+    .liste_filtres li{
+        margin-bottom:10px;
+    }
+    .filtres{
+        margin-bottom:10px;
+        padding-top:25px;
+        font-family:'Raleway';
+        font-weight:bolder;
+    } 
+    .centrer_filtres{
+        width: 75%;
+        flex-direction: column;
+        margin-right: 13.5%;
+        margin-left: 13.5%;
+    }
+
+    /* info nb logements sm */
+    .container_info_nb{
+        display:flex;
+        justify-content: center;      
+    }
+    .fa-info{
+        height:30px;        
+    }
+    .logo_nb_logements_info{
+        padding-right:20px;
+        padding-left:20px;
+    }    
+
+    /* container des sections hebergement, populaire et activité*/   
+    .container_card{
+        margin-top:30px;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+    /* container des sections hebergement et populaire */
+    .container_section{
+        flex-direction: column-reverse;
+    }
+
+    /* hebergement sm*/
+    /* section pour les cartes sm */
+    .hebergement_section{
+        width:100%;
+        padding-top:20px;
+        padding-right:5%;
+        padding-left:5%;
+        padding-bottom:20px;
+    }
+
+    /* article container est la div qui contient les articles de la section hebergement (utilisé pour la disposition des cartes) */
+    .articles_container{
+        width: 100%;        
+        align-items: center;
+    }    
+   
+    /* carte hebergement sm */
+    .card{        
+        width: 100%;
+        padding: 4px;
+        margin-bottom:20px;
+    }    
+    .card h3{
+        font-family:'Raleway';
+        font-weight:bolder;
+        font-size:16px;
+        margin-bottom: 5px;
+    }
+    .card p{
+        font-size: small;
+    }    
+    .card_hebergement_container{
+        margin-left: 10px;
+    }
+
+    /* selection de 'afficher plus' en bas de hebergment */
+    .font_bold{
+        font-family:'Raleway';
+        font-weight:bolder;
+    }
+
+    /* populaire sm */
+    .populaire_section{
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    /* activite sm*/ 
+    .container_activite{
+        width:100%;
+        padding-right:5%;
+        padding-left:5%;
+    }       
+    .card_activite{
+        width: 100%;
+        margin-bottom:7%;
+        height: 200px;        
+    }    
+    .card_activite img{
+        height:150px;
+    } 
+    .card_activite h3{        
+        padding-left:5%;
+    }
+    .container_h3_activite{        
+        line-height: 250%;
+    }
+
+    /* balise a container sm*/
+    .container_article_activite{
+        width:100%;
+    }
+
+    /* les 2 'card' à 50% sm*/
+    .container_small_activite{
+        width: 100%;
+    }
+
+    /* section footer */
+    footer{
+        flex-direction:column;
+        padding: 10%;
+    }
+    footer div{
+        width:70%;
+    }
+}
